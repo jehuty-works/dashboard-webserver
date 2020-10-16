@@ -1,0 +1,119 @@
+/* Master styles */
+body {
+    margin: 4px;
+    background-color: #552A50;
+}
+
+.container {
+    display: grid;
+    /* 1fr = 1 fractional unit = 100% of page space
+    creates parent column that spans entire page e.g. 1fr*/
+    grid-template-columns: 1fr;
+}
+
+/* navbar styles*/
+
+.nav-bar-wrapper {
+    /* apply flex style, allows elements to be positioned 
+    independently instead of stacked one over other*/
+    display: flex;
+    /* will justify elements using all available space in between*/
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display: flex;
+}
+
+/* inspect navbar-wrapper class
+then inspect left-side class within
+then apply changes to all divs inside left-side */
+.nav-bar-wrapper > .left-side > div {
+    margin-right: 20px;
+    /* em = a percentage of what font-size would normally be*/
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    /**/
+    border-bottom: 1px solid transparent;
+    /*transition = used to animate elements
+    apply animation to border???*/
+    transition: border-bottom 0.5s;
+}
+
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+/* inform CSS to check for 'mouse hover' state, 
+then apply changes to nav-link wrapper*/
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid white;
+}
+
+/* works with css path traversal as well*/
+.nav-link-wrapper a:hover {
+    color: white;
+}
+
+/* Toolkit Styles */
+.toolkit-items-wrapper {
+    display: grid;
+    /*1fr 1fr 1fr tells grid to split page space into 3 equal parts*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.toolkit-item-wrapper {
+    /* position: relative gives more freedom to
+    position elements within other elements */
+    position: relative;
+}
+
+.toolkit-img-background {
+    height: 350px;
+    width: 100%;
+    /* auto-crops images that don't resize properly, e.g. image cover/overlap */
+    background-size: cover;
+    /* center image */
+    background-position: center;
+    /* */
+    background-repeat: no-repeat;
+
+}
+
+.img-text-wrapper {
+    /* elements with absolute position MUST
+    be within a parent element with relative position */
+    position: absolute;
+    /* position at very top */
+    top: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.img-logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-logo-subtitle {
+    color: white;
+}
+
+.form-horizontal {
+    background-color: #95919B;
+}
+
+
